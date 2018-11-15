@@ -1,11 +1,13 @@
 from django.contrib import admin
 
+
 # Register your models here.
 
 from .models import Customer, Service, Product
 
+
 class CustomerList(admin.ModelAdmin):
-    list_display = ( 'cust_name', 'organization', 'phone_number' )
+    list_display = ( 'cust_name', 'organization', 'phone_number', generate_summary_pdf )
     list_filter = ( 'cust_name', 'organization')
     search_fields = ('cust_name', )
     ordering = ['cust_name']
@@ -21,6 +23,8 @@ class ProductList(admin.ModelAdmin):
     list_filter = ( 'cust_name', 'pickup_time')
     search_fields = ('cust_name', )
     ordering = ['cust_name']
+
+
 
 admin.site.register(Customer)
 admin.site.register(Service, ServiceList)
