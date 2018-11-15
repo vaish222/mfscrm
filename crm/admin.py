@@ -7,7 +7,7 @@ from .models import Customer, Service, Product
 
 
 class CustomerList(admin.ModelAdmin):
-    list_display = ( 'cust_name', 'organization', 'phone_number', generate_summary_pdf )
+    list_display = ( 'cust_name', 'organization', 'phone_number')
     list_filter = ( 'cust_name', 'organization')
     search_fields = ('cust_name', )
     ordering = ['cust_name']
