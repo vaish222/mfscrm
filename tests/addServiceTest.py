@@ -33,16 +33,16 @@ class addServiceTest(unittest.TestCase):
         time.sleep(1)
         elem = driver.find_element_by_id("id_cust_name")
         elem.send_keys("Barbara York")
-        time.sleep(1)
+
         elem = driver.find_element_by_id("id_service_category")
         elem.send_keys("Food Prep/Delivery")
-        time.sleep(1)
+
         elem = driver.find_element_by_id("id_description")
         elem.send_keys("Sandwich Lunch and Beverages - 30")
-        time.sleep(1)
+
         elem = driver.find_element_by_id("id_location")
         elem.send_keys("PKI Room 270")
-        time.sleep(1)
+
         # elem = driver.find_element_by_id("id_setup_time")
         # elem.send_keys("2018-11-09 17:31:26")
         # time.sleep(1)
@@ -51,7 +51,7 @@ class addServiceTest(unittest.TestCase):
         # time.sleep(1)
         elem = driver.find_element_by_id("id_service_charge")
         elem.send_keys("260")
-        time.sleep(1)
+
         # Click Save
         elem = driver.find_element_by_xpath("/html/body/div/div/div/form/button").click()
         time.sleep(2)

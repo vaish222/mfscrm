@@ -34,19 +34,19 @@ class editCustomerTest(unittest.TestCase):
         elem = driver.find_element_by_id("id_organization")
         elem.clear()
         elem.send_keys("ABC Inc.")
-        time.sleep(1)
+
         elem = driver.find_element_by_id("id_state")
         elem.clear()
         elem.send_keys("NE")
-        time.sleep(1)
+
         elem = driver.find_element_by_id("id_zipcode")
         elem.clear()
         elem.send_keys("67896")
-        time.sleep(1)
+
         elem = driver.find_element_by_id("id_phone_number")
         elem.clear()
         elem.send_keys("6784562378")
-        time.sleep(1)
+
         # Click Update
         elem = driver.find_element_by_xpath("/html/body/div/div/div/form/button").click()
         time.sleep(1)

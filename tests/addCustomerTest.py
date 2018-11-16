@@ -31,37 +31,36 @@ class addCustomerTest(unittest.TestCase):
         time.sleep(1)
         elem = driver.find_element_by_id("id_cust_name")
         elem.send_keys("Vaishali Goel")
-        time.sleep(1)
         elem = driver.find_element_by_id("id_organization")
         elem.send_keys("Capstone Inc.")
-        time.sleep(1)
+
         elem = driver.find_element_by_id("id_role")
         elem.send_keys("Staff Assistant")
-        time.sleep(1)
+
         elem = driver.find_element_by_id("id_bldgroom")
         elem.send_keys("PKI Room 260")
-        time.sleep(1)
+
         elem = driver.find_element_by_id("id_account_number")
         elem.send_keys("100")
-        time.sleep(1)
+
         elem = driver.find_element_by_id("id_address")
         elem.send_keys("12145 Stone dr.")
-        time.sleep(1)
+
         elem = driver.find_element_by_id("id_city")
         elem.send_keys("Omaha")
-        time.sleep(1)
+
         elem = driver.find_element_by_id("id_state")
         elem.send_keys("Nebraska")
-        time.sleep(1)
+
         elem = driver.find_element_by_id("id_zipcode")
         elem.send_keys("67895")
-        time.sleep(1)
+
         elem = driver.find_element_by_id("id_email")
         elem.send_keys("vg@unomaha.edu")
-        time.sleep(1)
+
         elem = driver.find_element_by_id("id_phone_number")
         elem.send_keys("6784562345")
-        time.sleep(1)
+
         # Click Save
         elem = driver.find_element_by_xpath("/html/body/div/div/div/form/button").click()
         time.sleep(1)

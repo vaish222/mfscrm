@@ -43,14 +43,14 @@ class editProductTest(unittest.TestCase):
         elem = driver.find_element_by_id("id_quantity")
         elem.clear()
         elem.send_keys("11")
-        time.sleep(1)
+
         # elem = driver.find_element_by_id("id_pickup_time")
         # elem.send_keys("2018-11-09 17:31:26")
         # time.sleep(1)
         elem = driver.find_element_by_id("id_charge")
         elem.clear()
         elem.send_keys("70")
-        time.sleep(1)
+
         # Click Update
         elem = driver.find_element_by_xpath("/html/body/div/div/div/form/button").click()
         time.sleep(1)

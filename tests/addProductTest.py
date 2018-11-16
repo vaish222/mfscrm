@@ -33,22 +33,22 @@ class addProductTest(unittest.TestCase):
         time.sleep(1)
         elem = driver.find_element_by_id("id_cust_name")
         elem.send_keys("Barbara York")
-        time.sleep(1)
+
         elem = driver.find_element_by_id("id_product")
         elem.send_keys("Box Lunch - Turkey on Wheat")
-        time.sleep(1)
+
         elem = driver.find_element_by_id("id_p_description")
         elem.send_keys("Box Lunch - Turkey on Wheat bread. Apple or Orange and Chips Cookie")
-        time.sleep(1)
+
         elem = driver.find_element_by_id("id_quantity")
         elem.send_keys("9")
-        time.sleep(1)
+
         # elem = driver.find_element_by_id("id_pickup_time")
         # elem.send_keys("2018-11-09 17:31:26")
         # time.sleep(1)
         elem = driver.find_element_by_id("id_charge")
         elem.send_keys("60")
-        time.sleep(1)
+
         # Click Save
         elem = driver.find_element_by_xpath("/html/body/div/div/div/form/button").click()
         time.sleep(1)

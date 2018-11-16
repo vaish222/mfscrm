@@ -43,14 +43,14 @@ class editServiceTest(unittest.TestCase):
         elem = driver.find_element_by_id("id_location")
         elem.clear()
         elem.send_keys("PKI Room 271")
-        time.sleep(1)
+
         # elem = driver.find_element_by_id("id_pickup_time")
         # elem.send_keys("2018-11-09 17:31:26")
         # time.sleep(1)
         elem = driver.find_element_by_id("id_service_charge")
         elem.clear()
         elem.send_keys("270")
-        time.sleep(1)
+
         # Click Update
         elem = driver.find_element_by_xpath("/html/body/div/div/div/form/button").click()
         time.sleep(2)
