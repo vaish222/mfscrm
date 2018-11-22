@@ -27,10 +27,6 @@ class readAndAddCustomerTest(unittest.TestCase):
         # Click View details under Customer
         elem = driver.find_element_by_xpath("/html/body/div/div/div/div[2]/div/div/div/div/div[1]/div/div/p[2]/a").click()
         time.sleep(1)
-        # Click Add Customer button
-        # elem = driver.find_element_by_xpath("/html/body/div/div/div/div[3]/div/a/span").click()
-        # time.sleep(1)
-
 
         workbook = xlrd.open_workbook("C:/Users/vaish/Customer_data.xlsx")
         sheet = workbook.sheet_by_name("Sheet1")

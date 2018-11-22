@@ -11,22 +11,22 @@ from mfscrm.tests.addServiceTest import addServiceTest
 from mfscrm.tests.summaryTest import summaryTest
 from mfscrm.tests.readAndAddCustomers import readAndAddCustomerTest
 from mfscrm.tests.customer import customer_test
+from mfscrm.tests.loginAndLogoutTest import login_logoutTest
 
+
+def suite_login_logout():
+    suite = unittest.TestSuite()
+    suite.addTest(login_logoutTest('test_login_logout'))
+    return suite
 
 
 def suite_customer():
-    #unittest.TestLoader.loadTestsFromTestCase(addCustomerTest)
-    #unittest.TestLoader.loadTestsFromTestCase(editCustomerTest)
-    #unittest.TestLoader.loadTestsFromTestCase(deleteCustomerTest)
+
     suite = unittest.TestSuite()
-    suite.addTest(customer_test('test_add_customer'))
-    suite.addTest(customer_test('test_edit_customer'))
-    suite.addTest(customer_test('test_delete_customer'))
-    suite.addTest(customer_test('test_summary'))
-    # suite.addTest(addCustomerTest('test_add_customer'))
-    # suite.addTest(editCustomerTest('test_edit_customer'))
-    # suite.addTest(deleteCustomerTest('test_delete_customer'))
-    # suite.addTest(summaryTest('test_summary'))
+    suite.addTest(addCustomerTest('test_add_customer'))
+    suite.addTest(editCustomerTest('test_edit_customer'))
+    suite.addTest(deleteCustomerTest('test_delete_customer'))
+    suite.addTest(summaryTest('test_summary'))
     return suite
 
 def suite_service():
@@ -50,8 +50,9 @@ def suite_read_excel():
 
 if __name__ == "__main__":
     runner = unittest.TextTestRunner()
+    runner.run(suite_login_logout())
     runner.run(suite_customer())
-    # runner.run(suite_service())
-    # runner.run(suite_product())
-    # runner.run(suite_read_excel())
+    runner.run(suite_service())
+    runner.run(suite_product())
+    runner.run(suite_read_excel()) #to read data from excel file and upload
 

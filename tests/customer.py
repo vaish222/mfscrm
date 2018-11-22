@@ -7,6 +7,9 @@ from selenium.webdriver.common.keys import Keys
 class customer_test(unittest.TestCase):
 
     @classmethod
+    def setUpClass(cls):
+        customer_test.setUp(cls)
+
     def setUp(self):
         self.driver = webdriver.Chrome()
         self.driver.maximize_window()
@@ -21,12 +24,16 @@ class customer_test(unittest.TestCase):
         elem = self.driver.find_element_by_xpath("/html/body/div/div/div/form/input[2]").click()
         print("Logged in")
         time.sleep(1)
-        # Click View details under Customer
-        elem = self.driver.find_element_by_xpath("/html/body/div/div/div/div[2]/div/div/div/div/div[1]/div/div/p[2]/a").click()
-        time.sleep(1)
+
+
+    #def test_login(self):
+
 
     def test_add_customer(self):
         driver = self.driver
+        # Click View details under Customer
+        elem = self.driver.find_element_by_xpath("/html/body/div/div/div/div[2]/div/div/div/div/div[1]/div/div/p[2]/a").click()
+        time.sleep(1)
         # Click Add Customer button
         elem = driver.find_element_by_xpath("/html/body/div/div/div/div[3]/div/a/span").click()
         time.sleep(1)
@@ -72,6 +79,9 @@ class customer_test(unittest.TestCase):
 
     def test_delete_customer(self):
         driver = self.driver
+        # Click View details under Customer
+        elem = self.driver.find_element_by_xpath("/html/body/div/div/div/div[2]/div/div/div/div/div[1]/div/div/p[2]/a").click()
+        time.sleep(1)
         # Click Delete Customer button
         elem = driver.find_element_by_xpath("/html/body/div/div/div/div[3]/table/tbody/tr[4]/td[13]/a").click()
         time.sleep(1)
@@ -84,6 +94,9 @@ class customer_test(unittest.TestCase):
 
     def test_edit_customer(self):
         driver = self.driver
+        # Click View details under Customer
+        elem = self.driver.find_element_by_xpath("/html/body/div/div/div/div[2]/div/div/div/div/div[1]/div/div/p[2]/a").click()
+        time.sleep(1)
         # Click Edit Customer button
         elem = driver.find_element_by_xpath("/html/body/div/div/div/div[3]/table/tbody/tr[4]/td[12]/a").click()
         time.sleep(1)
@@ -117,6 +130,9 @@ class customer_test(unittest.TestCase):
         print("Summary is shown successfully")
 
     @classmethod
+    def tearDownClass(cls):
+        customer_test.tearDown(cls)
+
     def tearDown(self):
         self.driver.close()
 

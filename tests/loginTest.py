@@ -16,7 +16,7 @@ class loginTest(unittest.TestCase):
         driver.get("https://foodserviceapp.herokuapp.com/")
         time.sleep(1)
         elem = driver.find_element_by_xpath("/html/body/nav/div/div[2]/ul[2]/li/a").click()
-        # time.sleep(3)
+
         elem = driver.find_element_by_id("id_username")
         elem.send_keys(user)
         elem = driver.find_element_by_id("id_password")
@@ -25,10 +25,7 @@ class loginTest(unittest.TestCase):
         elem = driver.find_element_by_xpath("/html/body/div/div/div/form/input[2]").click()
         print("Logged in")
         time.sleep(1)
-        #print("Logged in successfully")
-        # driver.get("http://127.0.0.1:8000")
-        # time.sleep(1)
-        # driver.get("http://127.0.0.1:8000")
+
 
 
     def tearDown(self):
